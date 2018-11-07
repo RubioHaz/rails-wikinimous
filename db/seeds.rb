@@ -7,6 +7,6 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-10.times do
+15.times do
   Article.create(title: Faker::Dessert.variety, content: Faker::ChuckNorris.fact)
 end

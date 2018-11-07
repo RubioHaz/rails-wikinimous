@@ -1,6 +1,7 @@
 <div class="container">
   <h1>Edit Article</h1>
-  <%= render 'form', restaurant: @restaurant %>
+  <%= render 'form', article: @article %><br>
+  <%= link_to "go to \"#{@article.title}\" article", article_path(@article) %>
   <hr>
-  <%= link_to 'go back', articles_path %>
+  <%= link_to 'go to all articles', articles_path %>
 </div>

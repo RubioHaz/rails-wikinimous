@@ -5,6 +5,10 @@
   <h3>
     <%= @article.content %>
   </h3>
+    <%= link_to 'edit', edit_article_path(@article) %> |
+    <%= link_to 'delete', article_path(@article),
+      method: :delete,
+      data: { confirm: "Are you sure you want to delete the article '#{@article.title}'?" } %>
   <hr>
-  <%= link_to 'go back', articles_path %>
+  <%= link_to 'go to all articles', articles_path %>
 </div>
