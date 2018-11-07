@@ -1,0 +1,22 @@
+<div class="container">
+
+  <h1>Articles</h1>
+
+  <ul>
+    <% @articles.each do |article| %>
+    <li class="list-item">
+      <%= fa_icon 'arrow-right' %>
+      <%= link_to article.title, article_path(article) %> |
+      <%= link_to 'edit', edit_article_path(article) %> |
+      <%= link_to 'delete', article_path(article),
+        method: :delete,
+        data: { confirm: "Are you sure you want to delete the article '#{article.title}'?" } %>
+    </li>
+    <% end %>
+  </ul>
+
+  <hr>
+
+  <%= link_to 'add new article', new_article_path %>
+
+</div>
